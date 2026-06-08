@@ -1,0 +1,454 @@
+/* ============================================================
+   HERO CSS — Premium Full-Height Hero Section
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy-deep);
+  /* background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8fbff 30%,
+    #edf4ff 65%,
+    #dbeafe 100%
+); */
+  overflow: hidden;
+  padding-top: 5rem; /* navbar offset */
+}
+
+/* ─── Background Elements ───────────────────────────────────── */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* .hero__gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 70% 50%, rgba(26,58,100,0.6) 0%, transparent 70%),
+    linear-gradient(135deg, #071629 0%, #0B1F3A 40%, #0d2644 100%);
+} */
+
+/* Subtle grid pattern overlay */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Decorative orbs */
+.hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.hero__orb--1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(201,168,76,0.08);
+  top: -100px;
+  right: 5%;
+  animation: orb-float 8s ease-in-out infinite;
+}
+
+.hero__orb--2 {
+  width: 280px;
+  height: 280px;
+  background: rgba(26,58,100,0.5);
+  bottom: 5%;
+  left: 5%;
+  animation: orb-float 10s ease-in-out infinite reverse;
+}
+
+.hero__orb--3 {
+  width: 180px;
+  height: 180px;
+  background: rgba(201,168,76,0.06);
+  top: 40%;
+  left: 20%;
+  animation: orb-float 6s ease-in-out infinite 2s;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -15px) scale(1.03); }
+  66% { transform: translate(-15px, 10px) scale(0.98); }
+}
+
+/* ─── Hero Content ──────────────────────────────────────────── */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+/* ─── Left Column ─────────────────────────────────────────────── */
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.hero__badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(201,168,76,0.35);
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+.hero__badge i {
+  font-size: 0.7rem;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.hero__headline em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+}
+
+.hero__subtext {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: var(--text-on-navy);
+  line-height: var(--lh-relaxed);
+  max-width: 520px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.hero__whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.85rem 1.8rem;
+  background: rgba(37,211,102,0.12);
+  border: 1.5px solid rgba(37,211,102,0.4);
+  border-radius: var(--radius-full);
+  color: #2fd778;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.hero__whatsapp-btn:hover {
+  background: rgba(37,211,102,0.2);
+  border-color: rgba(37,211,102,0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37,211,102,0.2);
+}
+
+.hero__whatsapp-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #2fd778;
+}
+
+/* ─── Trust Strip ─────────────────────────────────────────────── */
+.hero__trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero__trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-on-navy-dim);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.hero__trust-item i {
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+/* ─── Right Column — Photo ───────────────────────────────────── */
+/* .hero__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* 
+.hero__photo-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+} */
+
+/* Main photo frame
+.hero__photo-frame {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  /* background: linear-gradient(135deg, #1A3A64, #0B2347); */
+  /* border: 1px solid rgba(201,168,76,0.2); */
+  /* box-shadow:
+    0 30px 80px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(201,168,76,0.1),
+    inset 0 0 80px rgba(11,31,58,0.5); */
+/* } */ *
+/* 
+.hero__photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+} */
+
+/* Decorative frame border */
+/* .hero__photo-frame::before {
+  content: '';
+  position: absolute;
+  /* inset: -2px; */
+  /* inset:0; */
+  /* border-radius: calc(var(--radius-2xl) + 2px); */
+  /* background: linear-gradient(135deg, rgba(201,168,76,0.4), transparent 50%, rgba(201,168,76,0.15)); */
+  /* background: rgba(255,255,255,0.28); */
+  /* z-index: 1; */
+/* } */ 
+
+/* Photo overlay gradient
+.hero__photo-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  /* background: linear-gradient(to top, rgba(7,22,41,0.7), transparent); */
+  /* pointer-events: none; */
+/* } */ 
+
+/* Placeholder when no photo
+.hero__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  background: linear-gradient(160deg, #152D4F 0%, #0B1F3A 100%);
+} */
+/* 
+.hero__photo-placeholder .initials {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+} */
+/* 
+.hero__photo-placeholder .placeholder-label {
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: var(--space-2) var(--space-4);
+  border: 1px dashed rgba(255,255,255,0.15);
+  border-radius: var(--radius-sm);
+} */
+
+/* ─── Floating Stat Cards ─────────────────────────────────────── */
+.hero__stat-card {
+  position: absolute;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1.1rem;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 140px;
+  animation: card-float 4s ease-in-out infinite;
+}
+
+.hero__stat-card--1 {
+  top: 8%;
+  left: -12%;
+  animation-delay: 0s;
+}
+
+.hero__stat-card--2 {
+  bottom: 18%;
+  right: -10%;
+  animation-delay: 2s;
+}
+
+.hero__stat-card--3 {
+  bottom: 5%;
+  left: -8%;
+  animation-delay: 1s;
+}
+
+@keyframes card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.stat-card__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.stat-card__icon--gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy-deep);
+}
+
+.stat-card__icon--navy {
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  color: var(--white);
+}
+
+.stat-card__icon--green {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+}
+
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stat-card__label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ─── Scroll Cue ──────────────────────────────────────────────── */
+.hero__scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-on-navy-dim);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll-cue i {
+  font-size: 1.2rem;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+}
+
+/* Hero entry animations */
+.hero__left > * {
+  animation: hero-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero__badge-row { animation-delay: 0.1s; }
+.hero__headline { animation-delay: 0.2s; }
+.hero__subtext { animation-delay: 0.3s; }
+.hero__actions { animation-delay: 0.4s; }
+.hero__trust-strip { animation-delay: 0.5s; }
+
+.hero__right {
+  animation: hero-slide-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-slide-in {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+/* .hero__photo-placeholder {
+  filter:
+      drop-shadow(0 25px 35px rgba(0,0,0,0.12))
+      contrast(1.02)
+      saturate(1.01);
+
+  object-fit: contain;
+} */
