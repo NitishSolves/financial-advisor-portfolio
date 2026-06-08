@@ -215,100 +215,38 @@
 }
 
 /* ─── Right Column — Photo ───────────────────────────────────── */
-/* .hero__right {
+.hero__right {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
-/* 
+}
+
 .hero__photo-container {
   position: relative;
   width: 100%;
   max-width: 440px;
   margin-inline: auto;
-} */
+}
 
-/* Main photo frame
 .hero__photo-frame {
   position: relative;
   border-radius: var(--radius-2xl);
   overflow: hidden;
   aspect-ratio: 3/4;
-  /* background: linear-gradient(135deg, #1A3A64, #0B2347); */
-  /* border: 1px solid rgba(201,168,76,0.2); */
-  /* box-shadow:
-    0 30px 80px rgba(0,0,0,0.5),
-    0 0 0 1px rgba(201,168,76,0.1),
-    inset 0 0 80px rgba(11,31,58,0.5); */
-/* } */ *
-/* 
+  background: linear-gradient(135deg, rgba(26, 58, 100, 0.4) 0%, rgba(11, 31, 58, 0.6) 50%, rgba(15, 35, 65, 0.5) 100%);
+  border: 1px solid rgba(201,168,76,0.15);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5),
+              0 0 0 1px rgba(201,168,76,0.1),
+              inset 0 0 80px rgba(11,31,58,0.3);
+}
+
 .hero__photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-} */
-
-/* Decorative frame border */
-/* .hero__photo-frame::before {
-  content: '';
-  position: absolute;
-  /* inset: -2px; */
-  /* inset:0; */
-  /* border-radius: calc(var(--radius-2xl) + 2px); */
-  /* background: linear-gradient(135deg, rgba(201,168,76,0.4), transparent 50%, rgba(201,168,76,0.15)); */
-  /* background: rgba(255,255,255,0.28); */
-  /* z-index: 1; */
-/* } */ 
-
-/* Photo overlay gradient
-.hero__photo-frame::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  /* background: linear-gradient(to top, rgba(7,22,41,0.7), transparent); */
-  /* pointer-events: none; */
-/* } */ 
-
-/* Placeholder when no photo
-.hero__photo-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  background: linear-gradient(160deg, #152D4F 0%, #0B1F3A 100%);
-} */
-/* 
-.hero__photo-placeholder .initials {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--navy-deep);
-} */
-/* 
-.hero__photo-placeholder .placeholder-label {
-  font-size: var(--fs-xs);
-  color: rgba(255,255,255,0.35);
-  letter-spacing: 0.1em;
-  text-align: center;
-  padding: var(--space-2) var(--space-4);
-  border: 1px dashed rgba(255,255,255,0.15);
-  border-radius: var(--radius-sm);
-} */
+  object-position: center;
+}
 
 /* ─── Floating Stat Cards ─────────────────────────────────────── */
 .hero__stat-card {

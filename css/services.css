@@ -224,6 +224,8 @@
   position: relative;
   z-index: 1;
   max-width: 680px;
+  text-align: center;
+  margin-inline: auto;
 }
 
 /* ─── Services Full Page ───────────────────────────────────────── */
@@ -402,15 +404,19 @@
   border-radius: var(--radius-2xl);
   overflow: hidden;
   aspect-ratio: 4/5;
-  background: linear-gradient(160deg, #1A3A64 0%, #0B1F3A 100%);
+  background: linear-gradient(135deg, rgba(26, 58, 100, 0.4) 0%, rgba(11, 31, 58, 0.6) 50%, rgba(15, 35, 65, 0.5) 100%);
   box-shadow: var(--shadow-xl);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* Gold bracket decoration */
