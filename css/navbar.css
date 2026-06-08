@@ -44,18 +44,18 @@
 .navbar__logo-icon {
   width: 42px;
   height: 42px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--navy-deep);
-  letter-spacing: -0.02em;
   flex-shrink: 0;
   transition: transform var(--transition-base);
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark)) no-repeat center / contain;
+  background-image: url('../assets/images/logo.jpg');
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+  font-size: 0;
 }
 
 .navbar__logo:hover .navbar__logo-icon {
