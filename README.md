@@ -67,12 +67,12 @@ financial-advisor-portfolio/
 │
 ├── assets/
 │   ├── images/
-│   │   ├── hero/               # Advisor portrait (replace placeholder)
-│   │   ├── legacy/             # Award photos, seminar images
-│   │   ├── services/           # Service illustration images
-│   │   └── logos/              # LIC logo, IRDAI badge, certifications
-│   ├── icons/                  # Custom SVG icons (if any)
-│   └── fonts/                  # Self-hosted font files (optional)
+│   │   ├── Photo.png           # Advisor portrait used by the live pages
+│   │   └── Logo.jpg            # Site / advisor logo image
+│   ├── icons/
+│   │   └── .gitkeep            # Empty placeholder for future custom icons
+│   └── fonts/
+│       └── .gitkeep            # Empty placeholder for future self-hosted fonts
 │
 └── README.md
 ```
@@ -92,16 +92,18 @@ financial-advisor-portfolio/
 
 ## Key Features
 
-- **Sticky Navbar** — Transparent on hero, becomes frosted-glass on scroll
-- **Mobile Hamburger Menu** — Full-screen overlay with keyboard trap
-- **Mobile Bottom CTA Bar** — Fixed [Call | WhatsApp | Book] bar on mobile
-- **Floating WhatsApp Button** — Pulsing, always accessible
-- **Scroll Reveal Animations** — Intersection Observer, no library needed
-- **Animated Counters** — Count-up on scroll for stats
-- **FAQ Accordion** — Smooth height animation, ARIA-compliant
-- **Contact Form** — Full validation + WhatsApp redirect on submit
-- **Timeline** — Alternating desktop / single-column mobile
-- **Responsive at all breakpoints** — 320px to 1400px+
+- **Sticky Navbar** — Transparent on the homepage hero, then switches to a frosted-glass state on scroll
+- **Mobile Hamburger Menu** — Full-screen mobile navigation overlay with focus management and a book-consultation CTA
+- **Mobile Menu Contact Shortcuts** — Call and WhatsApp actions are available inside the mobile menu
+- **Floating WhatsApp Button** — Persistent WhatsApp entry point on live pages
+- **Scroll Reveal Animations** — Intersection Observer reveals content without third-party animation libraries
+- **Animated Counters** — Count-up statistics trigger when visible
+- **FAQ Accordion** — Smooth expand/collapse behavior with ARIA support
+- **Contact Form** — Client-side validation and a pre-filled WhatsApp handoff flow
+- **Timeline** — Alternating desktop / single-column mobile milestone layout
+- **Responsive at all breakpoints** — Layouts adapt from small mobile screens through wide desktop screens
+
+> Note: CSS and JavaScript hooks for a `.mobile-cta-bar` exist, but no bottom CTA bar markup is currently rendered in the HTML pages. The implemented mobile CTA experience is the hamburger menu CTA plus Call/WhatsApp shortcuts.
 
 ---
 
@@ -145,47 +147,34 @@ npx serve .
 
 ### 1. Replace Advisor Details
 
-Search and replace the following across all HTML files:
+The current production advisor details used across the live pages are:
 
-| Placeholder | Replace with |
-|------------|-------------|
-| `Rajesh Kumar Sharma` | Actual advisor name |
-| `RKS` | Advisor initials |
-| `+91 98765 43210` | Actual phone number |
-| `contact@rajeshskarma.in` | Actual email |
-| `Civil Lines, Deoria` | Actual office address |
-| `274001` | Actual PIN code |
-| `LIC Chief Advisor` | Actual title/designation |
-| `rajeshskarma.in` | Actual domain |
+| Field | Current value |
+|-------|---------------|
+| Advisor name | `Jitendra Singh` |
+| Title / designation | `LIC Chief Advisor` / `Senior LIC Chief Insurance Advisor` |
+| Phone | `+91 83170 82328` |
+| WhatsApp link | `https://wa.me/918317082328` |
+| Email | `jitendras138530@gmail.com` |
+| Office location | `Civil Lines, Deoria, Uttar Pradesh` |
+| Domain | Replace with your production domain, for example `https://example.com` |
 
-### 2. Add Professional Photo
+Before deploying, verify the HTML metadata, canonical URLs, JSON-LD, mail links, and JavaScript WhatsApp handoff all use the same production details.
 
-Replace the `.hero__photo-placeholder` div in `index.html` with:
+### 2. Update Professional Photo and Logo
 
-```html
-<img
-  src="assets/images/hero/advisor-photo.webp"
-  alt="Rajesh Kumar Sharma — Senior LIC Insurance Advisor"
-  loading="eager"
-  width="440"
-  height="587"
-/>
-```
+The repository currently includes these production image files:
 
-**Photo requirements:**
-- Format: WebP (preferred) or JPG
-- Dimensions: ~440×587px (portrait, 3:4 ratio)
-- File size: Under 120KB (compress at squoosh.app)
-- Background: Solid color or professional setting
+| Asset | Path | Notes |
+|-------|------|-------|
+| Advisor portrait | `assets/images/Photo.png` | Used for advisor photo placements |
+| Logo image | `assets/images/Logo.jpg` | Used for site / advisor branding |
 
-Repeat for the About section photo placeholder.
+If replacing these files, keep the same paths or update all HTML references at the same time. Optimize images before deployment and include accurate `alt`, `width`, and `height` attributes wherever the images are rendered.
 
 ### 3. Update WhatsApp Number
 
-Find all instances of `wa.me/919876543210` and replace `919876543210` with:
-`91` + your 10-digit number (no spaces or dashes).
-
-Example: For number `9876543210` → use `wa.me/919876543210`
+Production WhatsApp links should use `https://wa.me/918317082328`. If the advisor number changes, replace the digits after `wa.me/` with `91` + the 10-digit Indian mobile number, with no spaces or dashes.
 
 ### 4. Add Google Maps Embed
 
@@ -287,19 +276,18 @@ Before deploying to production:
 
 ---
 
-## Assets Required (Add to `/assets/`)
+## Current Assets
 
-Replace placeholder elements with these real assets:
+The repository currently tracks these asset paths:
 
 | Asset | Location | Notes |
 |-------|----------|-------|
-| Advisor portrait (front-facing) | `assets/images/hero/` | WebP, ~440×587px |
-| Advisor portrait (candid/office) | `assets/images/hero/` | For About section |
-| Award ceremony photos | `assets/images/legacy/` | LIC awards, recognition events |
-| Seminar/event photos | `assets/images/legacy/` | Financial literacy drives |
-| LIC logo (authorized) | `assets/images/logos/` | Use official LIC branding |
-| IRDAI badge | `assets/images/logos/` | Download from IRDAI website |
-| Office exterior/interior | `assets/images/` | For contact page trust |
+| Advisor portrait | `assets/images/Photo.png` | Production portrait image |
+| Logo image | `assets/images/Logo.jpg` | Production logo / brand image |
+| Icons placeholder | `assets/icons/.gitkeep` | Keeps the empty icons directory in Git |
+| Fonts placeholder | `assets/fonts/.gitkeep` | Keeps the empty fonts directory in Git |
+
+Add any future images directly under `assets/images/` or create new folders only when the corresponding files are actually added and referenced by the site.
 
 ---
 
@@ -347,7 +335,7 @@ Consult a legal professional to draft the actual Privacy Policy and Disclaimer p
 
 ## License
 
-This website code is built for and belongs to Rajesh Kumar Sharma. All content, design, and client stories are proprietary. Not for redistribution.
+This website code is built for the production LIC advisor portfolio. All finalized client content, design customizations, and client stories should be treated as proprietary unless the project owner grants redistribution rights.
 
 ---
 
@@ -360,7 +348,7 @@ For technical issues or customization help:
 
 For business inquiries:
 
-- Rajesh Kumar Sharma
-- Email: contact@rajeshskarma.in
-- Phone: +91 98765 43210
-- WhatsApp: wa.me/919876543210
+- Jitendra Singh
+- Email: jitendras138530@gmail.com
+- Phone: +91 83170 82328
+- WhatsApp: https://wa.me/918317082328
