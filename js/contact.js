@@ -7,6 +7,8 @@
 (function () {
   'use strict';
 
+  const WHATSAPP_NUMBER = '918317082328';
+
   const form = document.getElementById('contactForm');
   if (!form) return;
 
@@ -179,7 +181,7 @@
 
       // Construct WhatsApp link and open in new tab
       const waMsg  = buildWhatsAppMessage();
-      const waLink = `https://wa.me/919876543210?text=${waMsg}`;
+      const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`;
       window.open(waLink, '_blank', 'noopener,noreferrer');
 
       // Show success UI

@@ -209,12 +209,12 @@
   .testimonials-grid { grid-template-columns: 1fr; }
 
   /* Timeline */
-  .timeline { padding-inline: 0; }
+  .timeline { padding-left: 0; }
   .timeline::before { left: 1rem; }
   .timeline-item,
-  .timeline-item--left { padding-left: 2.75rem; }
+  .timeline-item--left { padding-left: 2rem; }
   .timeline-node { left: 1rem; }
-  .timeline-card { padding: 2rem; }
+  .timeline-card { padding: var(--space-5); }
   .timeline-card__year { font-size: 1.4rem; }
 
   /* CTA section */

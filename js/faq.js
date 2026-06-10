@@ -105,8 +105,4 @@
     });
   });
 
-  /* ── Open first item by default (optional) ──────────────────── */
-  // Uncomment to open the first FAQ item on page load:
-  // if (faqItems[0]) openItem(faqItems[0]);
-
 })();

@@ -162,9 +162,6 @@
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const steps = entry.target.querySelectorAll
-              ? [entry.target]
-              : [];
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
             claimObserver.unobserve(entry.target);
@@ -194,10 +191,8 @@
     });
   });
 
-  /* ── Navbar hide/show on scroll direction ───────────────────── */
-  // (Optional subtle improvement — only hide on mobile)
+  /* ── Mobile CTA bar visibility ──────────────────────────────── */
   if (window.innerWidth < 768) {
-    let lastScrollY  = 0;
     let ticking      = false;
     const mobileBar  = document.querySelector('.mobile-cta-bar');
 
@@ -207,7 +202,6 @@
       if (scrollY > 200) {
         mobileBar.style.display = 'flex';
       }
-      lastScrollY = scrollY;
       ticking = false;
     }
 
