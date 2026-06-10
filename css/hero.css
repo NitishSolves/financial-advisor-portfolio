@@ -8,13 +8,6 @@
   display: flex;
   align-items: center;
   background: var(--navy-deep);
-  /* background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #f8fbff 30%,
-    #edf4ff 65%,
-    #dbeafe 100%
-); */
   overflow: hidden;
   padding-top: 5rem; /* navbar offset */
 }
@@ -25,14 +18,6 @@
   inset: 0;
   z-index: 0;
 }
-
-/* .hero__gradient {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 80% at 70% 50%, rgba(26,58,100,0.6) 0%, transparent 70%),
-    linear-gradient(135deg, #071629 0%, #0B1F3A 40%, #0d2644 100%);
-} */
 
 /* Subtle grid pattern overlay */
 .hero__grid {
@@ -175,7 +160,6 @@
   font-size: var(--fs-sm);
   font-weight: 600;
   transition: all var(--transition-base);
-  /* margin-left: 5rem; */
 }
 
 .hero__whatsapp-btn:hover {
@@ -383,11 +367,3 @@
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateX(0); }
 }
-/* .hero__photo-placeholder {
-  filter:
-      drop-shadow(0 25px 35px rgba(0,0,0,0.12))
-      contrast(1.02)
-      saturate(1.01);
-
-  object-fit: contain;
-} */
