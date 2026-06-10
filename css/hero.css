@@ -175,6 +175,7 @@
   font-size: var(--fs-sm);
   font-weight: 600;
   transition: all var(--transition-base);
+  /* margin-left: 5rem; */
 }
 
 .hero__whatsapp-btn:hover {

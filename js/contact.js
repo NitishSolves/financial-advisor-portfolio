@@ -117,7 +117,7 @@
     const msg     = messageField ? messageField.value.trim() : '';
 
     const lines = [
-      `Hello Rajesh ji,`,
+      `Hello Jitendra Singh ji,`,
       ``,
       `I would like to inquire about your services.`,
       ``,

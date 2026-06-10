@@ -371,12 +371,15 @@ input, textarea, select {
   font-size: var(--fs-xs);
 }
 
+
 .btn-group {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
   align-items: center;
+  
 }
+
 
 /* ─── Grid Utilities ─────────────────────────────────────────── */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); }
