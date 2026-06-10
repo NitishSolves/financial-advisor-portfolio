@@ -228,6 +228,12 @@
   margin-inline: auto;
 }
 
+.legacy-story-eyebrow {
+  display: block;
+  text-align: center;
+  color: var(--gold);
+}
+
 /* ─── Services Full Page ───────────────────────────────────────── */
 .services-category {
   margin-bottom: var(--space-16);
