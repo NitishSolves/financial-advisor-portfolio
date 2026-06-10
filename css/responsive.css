@@ -86,10 +86,10 @@
 
   .timeline-card {
     max-width: 100%;
+    padding: 2rem;
   }
 
-  .timeline-item--right .timeline-card { margin-right: 0;
-  padding: 10rem; }
+  .timeline-item--right .timeline-card { margin-right: 0; }
   .timeline-item--left .timeline-card { margin-left: 0; text-align: left; }
   .timeline-item--left .timeline-card__tags { justify-content: flex-start; }
 
