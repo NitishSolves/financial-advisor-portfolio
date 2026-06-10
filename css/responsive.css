@@ -55,6 +55,14 @@
   .metric-item:nth-last-child(2) { border-bottom: none; }
 
   /* About */
+  .exp-badge { 
+    left: 0;
+    bottom: 1rem;
+    margin-bottom: 11rem;
+    margin-left:-2rem;
+    animation: card-float 4s ease-in-out infinite;
+  }
+  
   .about__layout {
     grid-template-columns: 1fr;
     gap: var(--space-10);
@@ -146,8 +154,6 @@
   /* Typography */
   body { font-size: 15px; }
 
-  /* Bottom bar */
-  .mobile-cta-bar { display: flex; }
 
   /* Push content above mobile bar */
   body { padding-bottom: 70px; }
@@ -201,8 +207,6 @@
   .grid-3,
   .grid-4 { grid-template-columns: 1fr; }
 
-  /* About */
-  .about__experience-badge { left: 0; bottom: 1rem; }
   .about__values { grid-template-columns: 1fr; }
 
   /* Testimonials */
@@ -278,7 +282,7 @@
 @media print {
   .navbar,
   .whatsapp-float,
-  .mobile-cta-bar,
+  /* .mobile-cta-bar, */
   .hero__scroll-cue,
   .hero__orb { display: none !important; }
 
@@ -327,7 +331,19 @@
 @media (max-width: 400px) {
   .hero__stat-card { min-width: 110px; padding: 0.55rem 0.75rem; }
   .hero__photo-container { max-width: 240px; }
-  .mobile-cta-bar__btn span { display: none; }
+  /* .mobile-cta-bar__btn span { display: none; } */
   .hero__badge { font-size: 0.62rem; }
   .metric-item { padding: var(--space-5) var(--space-3); }
+}
+/* .about__experience-badge { */
+ .exp-badge{
+  display: none;
+}
+@media(max-width: 1023px){
+.hero__stat-card.hero__stat-card--1{
+display:none;
+}
+.exp-badge{
+display:block;
+}
 }
