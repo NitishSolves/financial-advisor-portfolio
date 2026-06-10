@@ -8,12 +8,12 @@
   <title>Contact | Jitendra Singh — Book a Free Insurance Consultation, Deoria UP</title>
   <meta name="description" content="Book a free, no-obligation consultation with Jitendra Singh — Senior LIC Insurance Advisor in Deoria, Uttar Pradesh. Contact via WhatsApp, phone, email, or visit our office." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.Jitendra Singhskarma.in/pages/contact.html" />
+  <link rel="canonical" href="https://www.jitendrasinghskarma.in/pages/contact.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Contact Jitendra Singh — LIC Insurance Advisor Deoria" />
   <meta property="og:description" content="Book a free insurance or retirement planning consultation. WhatsApp, call, email or visit us in Deoria, UP." />
-  <meta property="og:url" content="https://www.Jitendra Singhskarma.in/pages/contact.html" />
+  <meta property="og:url" content="https://www.jitendrasinghskarma.in/pages/contact.html" />
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
@@ -21,13 +21,13 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Jitendra Singh — LIC Insurance Advisor",
-    "url": "https://www.Jitendra Singhskarma.in/pages/contact.html",
+    "url": "https://www.jitendrasinghskarma.in/pages/contact.html",
     "description": "Book a free insurance consultation with Senior LIC Chief Insurance Advisor in Deoria, UP.",
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "Jitendra Singh — LIC Insurance Advisor",
-      "telephone": "+91-98765-43210",
-      "email": "contact@Jitendra Singhskarma.in",
+      "telephone": "+91-8317082328",
+      "email": "jitendras138530@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Civil Lines",
@@ -52,324 +52,8 @@
   <link rel="stylesheet" href="../css/navbar.css" />
   <link rel="stylesheet" href="../css/hero.css" />
   <link rel="stylesheet" href="../css/services.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
   <link rel="stylesheet" href="../css/responsive.css" />
-
-  <style>
-    /* ── Contact-page specific styles ─────────────────────────── */
-    .contact-page-hero {
-      background: var(--navy-deep);
-      padding-top: clamp(7rem, 14vw, 11rem);
-      padding-bottom: clamp(3rem, 6vw, 5rem);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(26,58,100,0.5) 0%, transparent 70%),
-        linear-gradient(135deg, #071629 0%, #0B1F3A 100%);
-    }
-
-    .contact-page-hero__content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 640px;
-      margin-inline: auto;
-    }
-
-    /* Quick contact method cards */
-    .contact-methods {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-4);
-      margin-top: var(--space-10);
-    }
-
-    .contact-method-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-lg);
-      padding: var(--space-5) var(--space-4);
-      text-align: center;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-3);
-      transition: all var(--transition-base);
-      backdrop-filter: blur(8px);
-    }
-
-    .contact-method-card:hover {
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(201,168,76,0.4);
-      transform: translateY(-4px);
-    }
-
-    .contact-method-card__icon {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-
-    .contact-method-card__icon--whatsapp { background: rgba(37,211,102,0.15); color: #25D366; }
-    .contact-method-card__icon--phone    { background: rgba(201,168,76,0.15);  color: var(--gold); }
-    .contact-method-card__icon--email    { background: rgba(59,130,246,0.15);  color: #60A5FA; }
-    .contact-method-card__icon--visit    { background: rgba(239,68,68,0.15);   color: #F87171; }
-
-    .contact-method-card__label {
-      font-size: var(--fs-xs);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-on-navy-dim);
-    }
-
-    .contact-method-card__value {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--white);
-      line-height: 1.4;
-    }
-
-    /* Main contact layout */
-    .contact-main {
-      padding-block: var(--section-py);
-    }
-
-    .contact-main__grid {
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: clamp(3rem, 6vw, 5rem);
-      align-items: start;
-    }
-
-    /* Left info panel */
-    .contact-info-panel {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-8);
-    }
-
-    .contact-info-panel__heading {
-      font-size: var(--fs-h2);
-      color: var(--text-primary);
-      line-height: var(--lh-snug);
-      margin-bottom: var(--space-3);
-    }
-
-    .contact-info-panel__subtext {
-      font-size: var(--fs-sm);
-      color: var(--text-muted);
-      line-height: var(--lh-relaxed);
-    }
-
-    .contact-info-panel__trust {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-    }
-
-    .trust-row {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      padding: var(--space-3) var(--space-4);
-      background: var(--gray-50);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--gray-100);
-    }
-
-    .trust-row__icon {
-      width: 36px;
-      height: 36px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      color: var(--navy-deep);
-      flex-shrink: 0;
-    }
-
-    .trust-row__text {
-      font-size: var(--fs-sm);
-      font-weight: 500;
-      color: var(--text-primary);
-    }
-
-    .contact-detail-list {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-4);
-    }
-
-    .working-hours {
-      background: var(--navy);
-      border-radius: var(--radius-xl);
-      padding: var(--space-6);
-      color: var(--white);
-    }
-
-    .working-hours__title {
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: var(--space-4);
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .working-hours__rows {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-    }
-
-    .hours-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: var(--space-3);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-size: var(--fs-sm);
-    }
-
-    .hours-row:last-child { border-bottom: none; padding-bottom: 0; }
-
-    .hours-row__day { color: var(--text-on-navy-dim); font-weight: 500; }
-    .hours-row__time { color: var(--white); font-weight: 600; }
-    .hours-row__time--closed { color: rgba(239,68,68,0.8); }
-
-    .hours-note {
-      margin-top: var(--space-4);
-      padding-top: var(--space-3);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      font-size: var(--fs-xs);
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    /* Right form panel */
-    .contact-form-panel {
-      position: sticky;
-      top: 100px;
-    }
-
-    /* Map section */
-    .contact-map-section {
-      padding-block: var(--section-py-sm);
-      background: var(--gray-50);
-    }
-
-    .contact-map {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      height: 380px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--gray-200);
-    }
-
-    .contact-map iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
-    /* Map placeholder when no real embed */
-    .contact-map__placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(160deg, #e8f0f8 0%, #d0dff0 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-4);
-      text-align: center;
-      padding: var(--space-8);
-    }
-
-    .contact-map__placeholder .map-pin {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      color: var(--gold);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .contact-map__placeholder h4 {
-      font-size: 1.1rem;
-      color: var(--navy);
-    }
-
-    .contact-map__placeholder p {
-      font-size: var(--fs-sm);
-      color: var(--text-muted);
-      max-width: 340px;
-    }
-
-    .contact-map__placeholder a {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      color: var(--navy);
-      font-weight: 600;
-      font-size: var(--fs-sm);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    /* Responsive overrides */
-    @media (max-width: 1023px) {
-      .contact-methods {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .contact-main__grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-form-panel {
-        position: static;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .contact-methods {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-3);
-      }
-      .contact-method-card {
-        padding: var(--space-4) var(--space-3);
-      }
-      .contact-page-hero {
-        text-align: left;
-      }
-      .contact-page-hero__content {
-        margin-inline: 0;
-        text-align: left;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -480,7 +164,7 @@
               <div class="contact-method-card__value">+918317082328</div>
             </a>
 
-            <a href="mailto:contact@Jitendra Singhskarma.in" class="contact-method-card" role="listitem">
+            <a href="mailto:jitendras138530@gmail.com" class="contact-method-card" role="listitem">
               <div class="contact-method-card__icon contact-method-card__icon--email" aria-hidden="true">
                 <i class="fa-solid fa-envelope"></i>
               </div>
@@ -819,9 +503,9 @@
         </p>
         <nav aria-label="Legal links">
           <div class="footer__legal-links">
-            <a href="#" class="footer__legal-link">Privacy Policy</a>
-            <a href="#" class="footer__legal-link">Terms of Use</a>
-            <a href="#" class="footer__legal-link">Disclaimer</a>
+            <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+            <a href="terms.html" class="footer__legal-link">Terms of Use</a>
+            <a href="disclaimer.html" class="footer__legal-link">Disclaimer</a>
           </div>
         </nav>
       </div>
@@ -840,6 +524,22 @@
   <script src="../js/scroll.js" defer></script>
   <script src="../js/navbar.js" defer></script>
   <script src="../js/animations.js" defer></script>
+  <!-- ─── Mobile Bottom CTA Bar ──────────────────────────── -->
+  <nav class="mobile-cta-bar" aria-label="Quick contact actions">
+    <a href="tel:+918317082328" class="mobile-cta-bar__btn mobile-cta-bar__btn--call" aria-label="Call Jitendra Singh">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/918317082328?text=Hello%20Jitendra%20ji%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." class="mobile-cta-bar__btn mobile-cta-bar__btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with Jitendra Singh on WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#form" class="mobile-cta-bar__btn mobile-cta-bar__btn--consult" aria-label="Book a free consultation">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      <span>Book</span>
+    </a>
+  </nav>
+
   <script src="../js/contact.js" defer></script>
 </body>
 </html>
